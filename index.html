@@ -1,0 +1,1317 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabonetes Lucrativos – Transforme Sabonetes em Renda Extra</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== CSS VARIABLES ===== */
+      :root {
+        --cream: #faf6f1;
+        --beige: #ede0d0;
+        --beige-dark: #d4bfa5;
+        --brown-light: #b8926a;
+        --brown: #8b5e3c;
+        --brown-dark: #5c3b1e;
+        --text-dark: #3a2414;
+        --text-mid: #6b4c30;
+        --text-light: #9b7b5a;
+        --accent: #c0392b; /* urgência / preço riscado */
+        --green: #4caf50; /* confiança / garantia */
+        --gold: #c8963c; /* destaque premium */
+        --white: #ffffff;
+        --shadow: rgba(90, 50, 20, 0.15);
+      }
+
+      /* ===== RESET & BASE ===== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--cream);
+        color: var(--text-dark);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===== UTILITY ===== */
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .section {
+        padding: 70px 0;
+      }
+      .section-alt {
+        background: var(--beige);
+      }
+      .text-center {
+        text-align: center;
+      }
+      .serif {
+        font-family: "Poppins", sans-serif;
+      }
+      .divider {
+        width: 60px;
+        height: 3px;
+        background: var(--brown-light);
+        margin: 14px auto 0;
+        border-radius: 2px;
+      }
+
+      /* ===== BUTTONS ===== */
+      .btn-cta {
+        display: inline-block;
+        background: linear-gradient(135deg, #5c9e2e 0%, #3d7a1e 100%);
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-size: 1.15rem;
+        letter-spacing: 0.5px;
+        padding: 18px 48px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 8px 28px rgba(60, 120, 20, 0.35);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        text-align: center;
+      }
+      .btn-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px rgba(60, 120, 20, 0.45);
+      }
+      .btn-cta span {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 400;
+        opacity: 0.85;
+        margin-top: 2px;
+      }
+
+      /* ===== OFFER RIBBON ===== */
+      .ribbon {
+        background: var(--brown-dark);
+        color: var(--beige);
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+      .ribbon span {
+        color: var(--gold);
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        background: linear-gradient(
+          160deg,
+          var(--beige) 0%,
+          var(--cream) 60%,
+          #f5ece0 100%
+        );
+        padding: 60px 0 70px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #e8d5bc55 0%, transparent 70%);
+      }
+      .hero-inner {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .hero-text {
+        flex: 1 1 320px;
+      }
+      .hero-tag {
+        display: inline-block;
+        background: var(--brown-light);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 5px 16px;
+        border-radius: 30px;
+        margin-bottom: 18px;
+      }
+      .hero h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 900;
+        line-height: 1.2;
+        color: var(--brown-dark);
+        margin-bottom: 16px;
+      }
+      .hero h1 em {
+        color: var(--brown-light);
+        font-style: normal;
+      }
+      .hero-sub {
+        font-size: 1.1rem;
+        color: var(--text-mid);
+        margin-bottom: 32px;
+        max-width: 460px;
+      }
+      .hero-img {
+        flex: 0 0 280px;
+        text-align: center;
+      }
+      .hero-img img {
+        width: 420px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        margin: 0 auto;
+      }
+
+      /* placeholder gráfico quando não há imagem real */
+      .hero-img-placeholder {
+        width: 280px;
+        height: 280px;
+
+        border: 6px solid var(--beige-dark);
+        box-shadow: 0 20px 60px var(--shadow);
+        background: linear-gradient(
+          135deg,
+          #e8d4b8 0%,
+          #c9a87c 50%,
+          #a0714a 100%
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+      .hero-img-placeholder .soap-emoji {
+        font-size: 4rem;
+        margin-bottom: 10px;
+      }
+      .hero-img-placeholder strong {
+        font-size: 1.1rem;
+        line-height: 1.3;
+      }
+
+      .secure-badge {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 18px;
+        color: var(--text-light);
+        font-size: 0.83rem;
+      }
+      .secure-badge svg {
+        flex-shrink: 0;
+      }
+
+      /* ===== WHAT YOU GET ===== */
+      .section-title {
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+        font-weight: 700;
+        color: var(--brown-dark);
+        margin-bottom: 10px;
+      }
+      .section-subtitle {
+        color: var(--text-mid);
+        font-size: 1rem;
+        max-width: 580px;
+        margin: 0 auto;
+      }
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 22px;
+        margin-top: 42px;
+      }
+      .card {
+        background: var(--white);
+        border-radius: 18px;
+        padding: 28px 24px;
+        box-shadow: 0 4px 24px var(--shadow);
+        border-top: 4px solid var(--brown-light);
+        transition: transform 0.25s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card-icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+      }
+      .card h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--brown-dark);
+        margin-bottom: 6px;
+      }
+      .card p {
+        font-size: 0.88rem;
+        color: var(--text-mid);
+        line-height: 1.6;
+      }
+      .card-badge {
+        display: inline-block;
+        background: var(--gold);
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-top: 10px;
+        text-transform: uppercase;
+      }
+
+      /* ===== WHY CHOOSE ===== */
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 42px;
+        margin-bottom: 50px;
+      }
+      .reason-item {
+        text-align: center;
+      }
+      .reason-icon {
+        width: 68px;
+        height: 68px;
+        background: var(--beige);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.9rem;
+        margin: 0 auto 14px;
+        box-shadow: 0 4px 16px var(--shadow);
+      }
+      .reason-item h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        color: var(--brown-dark);
+        margin-bottom: 6px;
+      }
+      .reason-item p {
+        font-size: 0.85rem;
+        color: var(--text-mid);
+      }
+
+      /* ===== BONUS ===== */
+      .bonus-section {
+        background: linear-gradient(135deg, var(--brown-dark) 0%, #3a2010 100%);
+        color: var(--cream);
+        padding: 70px 0;
+      }
+      .bonus-section .section-title {
+        color: var(--gold);
+      }
+      .bonus-section .section-subtitle {
+        color: var(--beige);
+        opacity: 0.85;
+      }
+      .bonus-cards {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 42px;
+        justify-content: center;
+      }
+      .bonus-card {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(200, 150, 60, 0.35);
+        border-radius: 18px;
+        padding: 30px 26px;
+        flex: 1 1 240px;
+        max-width: 300px;
+        text-align: center;
+        backdrop-filter: blur(4px);
+      }
+      .bonus-card .b-icon {
+        font-size: 2.8rem;
+        margin-bottom: 14px;
+      }
+      .bonus-card h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.05rem;
+        color: var(--gold);
+        margin-bottom: 8px;
+      }
+      .bonus-card p {
+        font-size: 0.85rem;
+        color: var(--beige);
+        opacity: 0.85;
+        margin-bottom: 14px;
+      }
+      .bonus-value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .bonus-value .old {
+        text-decoration: line-through;
+        color: #c0a070;
+        font-size: 0.85rem;
+      }
+      .bonus-value .free {
+        color: #6fe06f;
+        font-weight: 900;
+        font-size: 1rem;
+      }
+
+      /* ===== URGENCY ===== */
+      .urgency-bar {
+        background: var(--accent);
+        color: #fff;
+        padding: 60px 0;
+        text-align: center;
+      }
+      .urgency-bar h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        margin-bottom: 10px;
+      }
+      .urgency-bar p {
+        font-size: 1rem;
+        opacity: 0.9;
+        margin-bottom: 30px;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .countdown {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .count-box {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        padding: 14px 22px;
+        min-width: 80px;
+        text-align: center;
+      }
+      .count-box span {
+        display: block;
+        font-size: 2.6rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+      .count-label {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        opacity: 0.8;
+        margin-top: 4px;
+      }
+
+      /* ===== PRICE ===== */
+      .price-box {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 48px 40px;
+        max-width: 560px;
+        margin: 0 auto;
+        box-shadow: 0 12px 50px var(--shadow);
+        text-align: center;
+        border: 2px solid var(--beige-dark);
+      }
+      .price-from {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+      .price-from s {
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+      .price-big {
+        font-family: "Poppins", sans-serif;
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: var(--brown-dark);
+        line-height: 1;
+        margin: 8px 0;
+      }
+      .price-big sup {
+        font-size: 1.5rem;
+        vertical-align: super;
+      }
+      .price-save {
+        background: #e8f5e9;
+        color: var(--green);
+        font-weight: 700;
+        font-size: 0.85rem;
+        display: inline-block;
+        padding: 4px 14px;
+        border-radius: 20px;
+        margin-bottom: 26px;
+      }
+      .price-list {
+        list-style: none;
+        margin-bottom: 30px;
+        text-align: left;
+        display: inline-block;
+      }
+      .price-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text-mid);
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+      .price-list li::before {
+        content: "✓";
+        color: var(--green);
+        font-weight: 900;
+        font-size: 1.1rem;
+      }
+
+      /* ===== TESTIMONIALS ===== */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 24px;
+        margin-top: 42px;
+      }
+      .testi-card {
+        background: var(--white);
+        border-radius: 18px;
+        padding: 28px 24px;
+        box-shadow: 0 4px 20px var(--shadow);
+        position: relative;
+      }
+      .testi-card::before {
+        content: '"';
+        font-family: "Poppins", sans-serif;
+        font-size: 5rem;
+        color: var(--beige-dark);
+        position: absolute;
+        top: -14px;
+        left: 18px;
+        line-height: 1;
+      }
+      .testi-stars {
+        color: var(--gold);
+        font-size: 1rem;
+        margin-bottom: 12px;
+      }
+      .testi-text {
+        font-size: 0.9rem;
+        color: var(--text-mid);
+        margin-bottom: 16px;
+        font-style: italic;
+      }
+      .testi-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .testi-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--brown-light),
+          var(--beige-dark)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .testi-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--brown-dark);
+      }
+      .testi-location {
+        font-size: 0.78rem;
+        color: var(--text-light);
+      }
+
+      /* ===== GUARANTEE ===== */
+      .guarantee-inner {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .guarantee-badge {
+        flex: 0 0 160px;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--green) 0%, #2e7d32 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 10px 36px rgba(46, 125, 50, 0.35);
+        flex-shrink: 0;
+      }
+      .guarantee-badge .g-num {
+        font-family: "Poppins", sans-serif;
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+      .guarantee-badge .g-label {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: 0.9;
+        margin-top: 2px;
+      }
+      .guarantee-text h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.8rem;
+        color: var(--brown-dark);
+        margin-bottom: 12px;
+      }
+      .guarantee-text p {
+        color: var(--text-mid);
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+      }
+
+      /* ===== FAQ ===== */
+      .faq-list {
+        max-width: 680px;
+        margin: 40px auto 0;
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--beige-dark);
+        overflow: hidden;
+      }
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
+        padding: 20px 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.98rem;
+        font-weight: 700;
+        color: var(--brown-dark);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .faq-question .faq-icon {
+        flex-shrink: 0;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--beige);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: var(--brown);
+        transition: transform 0.3s;
+      }
+      .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease,
+          padding 0.3s;
+        font-size: 0.9rem;
+        color: var(--text-mid);
+      }
+      .faq-answer-inner {
+        padding-bottom: 18px;
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background: var(--brown-dark);
+        color: var(--beige);
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 0.82rem;
+      }
+      .footer strong {
+        color: var(--gold);
+      }
+      .footer p {
+        margin-top: 8px;
+        opacity: 0.7;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 600px) {
+        .hero-inner {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-img {
+          order: 2;
+          margin: 20px 0;
+        }
+
+        .btn-cta {
+          order: 3;
+        }
+      }
+    </style>
+    <!-- Script UTMify -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+    <!-- Pixel Facebook / UTMify -->
+    <script>
+      window.pixelId = "69b6e9bf985fb921df331ea7";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+  </head>
+  <body>
+    <!-- ===== RIBBON ===== -->
+    <div class="ribbon">
+      🎉 OFERTA ESPECIAL VÁLIDA <span id="ribbon-date">HOJE</span> — APENAS
+      <span>R$ 10,00</span> ⏳
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <span class="hero-tag">✨ Novo Ebook – Lançamento</span>
+            <h1>
+              Transforme Sabonetes Artesanais em
+              <em>Renda Extra Real</em>
+            </h1>
+            <p class="hero-sub">
+              Aprenda do zero a criar sabonetes artesanais incríveis, vender com
+              lucro e construir sua independência financeira — mesmo que nunca
+              tenha feito um sabonete na vida.
+            </p>
+          </div>
+          <div class="hero-img">
+            <!-- SUBSTITUA a div abaixo por uma tag <img> com sua imagem real -->
+            <img
+              src="src/img/mockup_ebook.png"
+              alt="Imagem do Produtos - Sabonetes Lucrativos"
+            />
+            <a href="#preco" class="btn-cta">
+              🛒 Quero Meu Ebook Agora!
+              <span>Acesso imediato por apenas R$ 10,00</span>
+            </a>
+            <div class="secure-badge">
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#4CAF50"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                />
+              </svg>
+              Compra 100% Segura &amp; Pagamento Criptografado
+            </div>
+            <!-- Exemplo: <img src="seu-produto.png" alt="Ebook Sabonetes Lucrativos" /> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== O QUE VOCÊ VAI RECEBER ===== -->
+    <section class="section section-alt">
+      <div class="container text-center">
+        <h2 class="section-title serif">O Que Você Vai Receber</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle" style="margin-top: 14px">
+          Um guia completo e prático que vai te levar do zero ao lucro — com
+          tudo que você precisa para começar ainda esta semana.
+        </p>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">👋</div>
+            <h3>Boas-Vindas</h3>
+            <p>
+              Uma introdução calorosa ao mundo dos sabonetes artesanais e como
+              usar o material ao máximo.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🛒</div>
+            <h3>Materiais Necessários</h3>
+            <p>
+              Lista completa dos insumos, onde comprar barato e como montar sua
+              bancada de trabalho em casa.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📚</div>
+            <h3>Fundamentos Básicos</h3>
+            <p>
+              Aprenda as técnicas essenciais, química básica da saponificação e
+              segurança no processo.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🧼</div>
+            <h3>+70 Receitas Artesanais</h3>
+            <p>
+              Receitas com ingredientes naturais, aromas especiais, formatos e
+              acabamentos incríveis para vender mais.
+            </p>
+            <span class="card-badge">⭐ Carro-chefe</span>
+          </div>
+          <div class="card">
+            <div class="card-icon">💰</div>
+            <h3>Como Vender e Lucrar Muito</h3>
+            <p>
+              Estratégias de precificação, vendas no Instagram, WhatsApp, feiras
+              e marketplaces online.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎁</div>
+            <h3>Bônus Exclusivos</h3>
+            <p>
+              Materiais extras valiosíssimos incluídos gratuitamente apenas para
+              quem comprar hoje.
+            </p>
+            <span class="card-badge">🔥 Grátis Hoje</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POR QUE ESCOLHER ===== -->
+    <section class="section">
+      <div class="container text-center">
+        <h2 class="section-title serif">
+          Por Que Escolher o Ebook<br />Sabonetes Lucrativos?
+        </h2>
+        <div class="divider"></div>
+        <div class="reasons-grid">
+          <div class="reason-item">
+            <div class="reason-icon">🚀</div>
+            <h3>Resultados Rápidos</h3>
+            <p>
+              Método prático para você produzir e vender seus primeiros
+              sabonetes em poucos dias — sem enrolação.
+            </p>
+          </div>
+          <div class="reason-item">
+            <div class="reason-icon">👩‍🎨</div>
+            <h3>Para Iniciantes</h3>
+            <p>
+              Mesmo sem experiência, o passo a passo claro garante que qualquer
+              pessoa consiga aprender e aplicar.
+            </p>
+          </div>
+          <div class="reason-item">
+            <div class="reason-icon">💸</div>
+            <h3>Alta Margem de Lucro</h3>
+            <p>
+              Sabonetes artesanais custam pouco para produzir e podem ser
+              vendidos com lucro de até 300%.
+            </p>
+          </div>
+          <div class="reason-item">
+            <div class="reason-icon">📱</div>
+            <h3>Venda de Qualquer Lugar</h3>
+            <p>
+              Aprenda a vender pelas redes sociais, WhatsApp e feiras sem
+              precisar de loja física.
+            </p>
+          </div>
+        </div>
+        <a href="#preco" class="btn-cta">✨ Quero Meu Ebook Agora</a>
+      </div>
+    </section>
+
+    <!-- ===== BÔNUS EXCLUSIVOS ===== -->
+    <section class="bonus-section">
+      <div class="container text-center">
+        <h2 class="section-title serif">🎁 Bônus Exclusivos</h2>
+        <div class="divider" style="background: var(--gold)"></div>
+        <p
+          class="section-subtitle"
+          style="margin-top: 14px; color: var(--beige)"
+        >
+          Presentes especiais para acelerar seus resultados — incluídos 100% de
+          graça apenas hoje!
+        </p>
+        <div class="bonus-cards">
+          <div class="bonus-card">
+            <div class="b-icon">📖</div>
+            <h3>Ebook: 40 Receitas de Sabonetes</h3>
+            <p>
+              Um bônus recheado de receitas exclusivas para variar seu portfólio
+              e atrair mais clientes.
+            </p>
+            <div class="bonus-value">
+              <span class="old">R$ 27,00</span>
+              <span class="free">🎁 GRÁTIS</span>
+            </div>
+          </div>
+          <div class="bonus-card">
+            <div class="b-icon">🌸</div>
+            <h3>Ebook: Aromas e Perfumes Especiais</h3>
+            <p>
+              Aprenda a criar fragrâncias únicas que fazem seus sabonetes se
+              destacar na concorrência.
+            </p>
+            <div class="bonus-value">
+              <span class="old">R$ 37,00</span>
+              <span class="free">🎁 GRÁTIS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== URGÊNCIA COM CONTADOR ===== -->
+    <section class="urgency-bar">
+      <div class="container">
+        <h2>⚠️ Atenção: Oferta Válida Até as 23:59 de Hoje!</h2>
+        <p>
+          Esta promoção especial é exclusiva para hoje. Após a meia-noite o
+          preço volta para R$ 47,00 — não deixe passar essa oportunidade única
+          de mudar sua vida financeira!
+        </p>
+        <div class="countdown">
+          <div class="count-box">
+            <span id="c-hours">--</span>
+            <div class="count-label">Horas</div>
+          </div>
+          <div class="count-box">
+            <span id="c-min">--</span>
+            <div class="count-label">Minutos</div>
+          </div>
+          <div class="count-box">
+            <span id="c-sec">--</span>
+            <div class="count-label">Segundos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PREÇO ===== -->
+    <section class="section" id="preco">
+      <div class="container text-center">
+        <h2 class="section-title serif" style="margin-bottom: 10px">
+          Garanta Agora com Desconto Exclusivo
+        </h2>
+        <div class="divider"></div>
+        <div style="height: 36px"></div>
+        <div class="price-box">
+          <p class="price-from">De <s>R$ 47,00</s> por apenas:</p>
+          <div class="price-big"><sup>R$</sup>10<sup>,00</sup></div>
+          <span class="price-save">💚 Você economiza R$ 37,00 hoje!</span>
+          <ul class="price-list">
+            <li>+70 Receitas Práticas e Lucrativas</li>
+            <li>Bônus: 40 Receitas Extras</li>
+            <li>Bônus: Aromas e Perfumes Especiais</li>
+            <li>Estratégias de Vendas no Digital</li>
+            <li>Acesso Imediato após a compra</li>
+            <li>Garantia Incondicional de 7 Dias</li>
+          </ul>
+          <a
+            href="https://pay.cakto.com.br/37o7qjo_805013"
+            class="btn-cta"
+            style="width: 100%; display: block"
+          >
+            🛒 Quero Minhas Receitas por R$ 10,00
+            <span>⚡ Clique e tenha acesso imediato</span>
+          </a>
+          <div
+            class="secure-badge"
+            style="justify-content: center; margin-top: 16px"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#4CAF50"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+              />
+            </svg>
+            Pagamento 100% Seguro — Pix, Cartão ou Boleto
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="section section-alt">
+      <div class="container text-center">
+        <h2 class="section-title serif">Quem Comprou Amou 💛</h2>
+        <div class="divider"></div>
+        <div class="testimonials-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Comprei sem muita esperança e me surpreendi! As receitas são
+              incríveis e em duas semanas já vendi R$ 380 em sabonetes para
+              vizinhas e amigas."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">A</div>
+              <div>
+                <div class="testi-name">Ana Paula S.</div>
+                <div class="testi-location">Belo Horizonte, MG</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Mãe de dois filhos e sem emprego fixo, o ebook me deu a renda que
+              eu precisava. Hoje vendo no WhatsApp e já tenho clientes fixos
+              toda semana!"
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">C</div>
+              <div>
+                <div class="testi-name">Carla M.</div>
+                <div class="testi-location">São Paulo, SP</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "O bônus de aromas foi o que mais me ajudou. Criei uma fragrância
+              exclusiva e todo mundo quer saber o meu segredo. Recomendo
+              demais!"
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">F</div>
+              <div>
+                <div class="testi-name">Fernanda L.</div>
+                <div class="testi-location">Curitiba, PR</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Nunca tinha feito sabonete na vida. Segui o passo a passo e no
+              primeiro lote já fiz 20 unidades. Vendi em 3 dias na feira do
+              bairro. Vale cada centavo!"
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">J</div>
+              <div>
+                <div class="testi-name">Juliana R.</div>
+                <div class="testi-location">Fortaleza, CE</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Já comprei outros cursos de artesanato mais caros e esse ebook de
+              R$ 10 é de longe o mais completo. O módulo de vendas mudou tudo
+              para mim!"
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">R</div>
+              <div>
+                <div class="testi-name">Renata T.</div>
+                <div class="testi-location">Porto Alegre, RS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GARANTIA ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="guarantee-inner">
+          <div class="guarantee-badge">
+            <div class="g-num">7</div>
+            <div class="g-label">Dias de<br />Garantia</div>
+          </div>
+          <div class="guarantee-text">
+            <h2 class="serif">Sua Compra é 100% Garantida</h2>
+            <p>
+              Estamos tão confiantes no nosso material que oferecemos
+              <strong>7 dias de garantia incondicional</strong>. Se por qualquer
+              motivo você não ficar satisfeita — basta enviar um e-mail e
+              devolvemos 100% do seu dinheiro, sem perguntas, sem burocracia. O
+              risco é todo nosso. O lucro é todo seu.
+            </p>
+            <a href="#preco" class="btn-cta">
+              🛒 Quero Meu Ebook com Garantia
+              <span>R$ 10,00 – Acesso Imediato</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section-alt">
+      <div class="container text-center">
+        <h2 class="section-title serif">Perguntas Frequentes</h2>
+        <div class="divider"></div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              Como recebo o ebook após a compra?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Após a confirmação do pagamento, você recebe o link de acesso
+                imediatamente no e-mail cadastrado. O download é instantâneo —
+                em menos de 2 minutos você já está lendo!
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Precisa de experiência prévia para começar?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Não! O ebook foi desenvolvido especialmente para iniciantes.
+                Todo o conteúdo é em linguagem simples, com passo a passo
+                detalhado. Se você nunca fez um sabonete na vida, esse é o lugar
+                certo para começar.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Quais formas de pagamento são aceitas?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Aceitamos Pix (aprovação imediata), cartão de crédito (em até
+                12x) e boleto bancário. O ambiente de pagamento é 100% seguro e
+                criptografado.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              E se eu não gostar? Consigo reembolso?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Sim! Você tem 7 dias de garantia total. Se por qualquer razão o
+                material não atender suas expectativas, basta nos enviar um
+                e-mail e devolvemos 100% do valor pago — sem perguntas, sem
+                complicação.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== URGÊNCIA FINAL ===== -->
+    <section class="urgency-bar">
+      <div class="container">
+        <h2>⚠️ Última Chance — Oferta Válida Somente Até as 23:59 de Hoje!</h2>
+        <p>
+          Não perca mais tempo. Cada hora que passa é uma hora a menos para
+          garantir esse preço especial de R$ 10,00. Após a meia-noite, o preço
+          voltará para R$ 47,00.
+        </p>
+        <a
+          href="#preco"
+          class="btn-cta"
+          style="
+            background: linear-gradient(135deg, #fff 0%, #f0e8d8 100%);
+            color: var(--brown-dark);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+          "
+        >
+          🛒 Garantir Meu Ebook Agora — R$ 10,00
+          <span style="color: var(--brown)"
+            >Clique antes que o preço aumente!</span
+          >
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER / DIREITOS ===== -->
+    <footer class="footer">
+      <p>
+        <strong>© 2025 Sabonetes Lucrativos</strong> — Todos os direitos
+        reservados.
+      </p>
+      <p>
+        ⚠️
+        <strong
+          >Este site não faz parte do Facebook™ ou Meta Platforms, Inc.</strong
+        ><br />
+        Este produto não é endossado pelo Facebook de nenhuma forma. Facebook™ é
+        uma marca registrada da Meta Platforms, Inc.
+      </p>
+      <p style="margin-top: 12px">
+        Ao adquirir este produto, você concorda com nossos Termos de Uso e
+        Política de Privacidade.<br />
+        Os resultados podem variar de pessoa para pessoa. Resultados dependem de
+        esforço e dedicação individual.
+      </p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      /* ----- Ribbon: data atual ----- */
+      (function () {
+        const months = [
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro",
+        ];
+        const now = new Date();
+        const el = document.getElementById("ribbon-date");
+        if (el)
+          el.textContent = `HOJE (${now.getDate()} DE ${months[now.getMonth()].toUpperCase()})`;
+      })();
+
+      /* ----- Countdown até 23:59 de hoje ----- */
+      function updateCountdown() {
+        const now = new Date();
+        const end = new Date();
+        end.setHours(23, 59, 59, 999);
+        let diff = Math.max(0, end - now);
+        const h = Math.floor(diff / 3600000);
+        diff %= 3600000;
+        const m = Math.floor(diff / 60000);
+        diff %= 60000;
+        const s = Math.floor(diff / 1000);
+        const pad = (n) => String(n).padStart(2, "0");
+        document.getElementById("c-hours").textContent = pad(h);
+        document.getElementById("c-min").textContent = pad(m);
+        document.getElementById("c-sec").textContent = pad(s);
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      /* ----- FAQ accordion ----- */
+      document.querySelectorAll(".faq-question").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+          const answer = item.querySelector(".faq-answer");
+          const isOpen = item.classList.contains("open");
+          // fecha todos
+          document.querySelectorAll(".faq-item").forEach((i) => {
+            i.classList.remove("open");
+            i.querySelector(".faq-answer").style.maxHeight = null;
+          });
+          // abre este se estava fechado
+          if (!isOpen) {
+            item.classList.add("open");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
