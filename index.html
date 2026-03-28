@@ -154,7 +154,7 @@
       .hero-inner {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 8px;
         flex-wrap: wrap;
       }
       .hero-text {
@@ -202,6 +202,7 @@
         border: none;
         box-shadow: none;
         margin: 0 auto;
+        margin-top: -50px;
       }
 
       /* placeholder gráfico quando não há imagem real */
@@ -722,6 +723,27 @@
           order: 3;
         }
       }
+      /* Animação de pulse - botao cta */
+      /* ===== PULSE CTA ===== */
+      @keyframes pulseCTA {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 8px 28px rgba(60, 120, 20, 0.35);
+        }
+        50% {
+          transform: scale(1.06);
+          box-shadow: 0 12px 40px rgba(60, 120, 20, 0.6);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 8px 28px rgba(60, 120, 20, 0.35);
+        }
+      }
+
+      /* aplica animação */
+      .btn-cta {
+        animation: pulseCTA 1.8s infinite;
+      }
     </style>
     <!-- Script UTMify -->
     <script
@@ -744,7 +766,7 @@
   <body>
     <!-- ===== RIBBON ===== -->
     <div class="ribbon">
-      🎉 OFERTA ESPECIAL VÁLIDA <span id="ribbon-date">HOJE</span> — APENAS
+      🔥 Oferta Encerra <span id="ribbon-date">HOJE</span> — Apenas
       <span>R$ 9,90</span> ⏳
     </div>
 
@@ -753,15 +775,14 @@
       <div class="container">
         <div class="hero-inner">
           <div class="hero-text">
-            <span class="hero-tag">✨ Novo Ebook – Lançamento</span>
             <h1>
-              Transforme Sabonetes Artesanais em
-              <em>Renda Extra Real</em>
+              O Guia Prático <em>Com + 70 Receitas de Sabonetes</em> Para Vender
+              Todo Dia!
             </h1>
             <p class="hero-sub">
-              Aprenda do zero a criar sabonetes artesanais incríveis, vender com
-              lucro e construir sua independência financeira — mesmo que nunca
-              tenha feito um sabonete na vida.
+              Aprenda a criar sabonetes artesanais e faturar até
+              <strong>R$ 2.579,00/Mês</strong> e construir sua independência
+              financeira do zero.
             </p>
           </div>
           <div class="hero-img">
@@ -771,7 +792,7 @@
               alt="Imagem do Produtos - Sabonetes Lucrativos"
             />
             <a href="#preco" class="btn-cta">
-              🛒 Quero Meu Ebook Agora!
+              🛒 Comprar Ebook Agora!
               <span>Acesso imediato por apenas R$ 9,90</span>
             </a>
             <div class="secure-badge">
@@ -902,7 +923,7 @@
             </p>
           </div>
         </div>
-        <a href="#preco" class="btn-cta">✨ Quero Meu Ebook Agora</a>
+        <a href="#preco" class="btn-cta">✨ Compra Ebook Agora</a>
       </div>
     </section>
 
@@ -920,7 +941,7 @@
         </p>
         <div class="bonus-cards">
           <div class="bonus-card">
-            <div class="b-icon">📖</div>
+            <img src="src/img/bonus1.png" alt="bonus 1" />
             <h3>Ebook: 40 Receitas de Sabonetes</h3>
             <p>
               Um bônus recheado de receitas exclusivas para variar seu portfólio
@@ -932,7 +953,7 @@
             </div>
           </div>
           <div class="bonus-card">
-            <div class="b-icon">🌸</div>
+            <img src="src/img/bonus2.png" alt="bonus 1" />
             <h3>Ebook: Aromas e Perfumes Especiais</h3>
             <p>
               Aprenda a criar fragrâncias únicas que fazem seus sabonetes se
@@ -998,7 +1019,7 @@
             class="btn-cta"
             style="width: 100%; display: block"
           >
-            🛒 Quero Minhas Receitas por R$ 9,90
+            🛒 Comprar Agora por R$ 9,90
             <span>⚡ Clique e tenha acesso imediato</span>
           </a>
           <div
@@ -1128,7 +1149,7 @@
               risco é todo nosso. O lucro é todo seu.
             </p>
             <a href="#preco" class="btn-cta">
-              🛒 Quero Meu Ebook com Garantia
+              🛒 Comprar Ebook Agora com Garantia
               <span>R$ 9,90 – Acesso Imediato</span>
             </a>
           </div>
@@ -1221,7 +1242,7 @@
             box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
           "
         >
-          🛒 Garantir Meu Ebook Agora — R$ 9,90
+          🛒 Comprar Ebook Agora — R$ 9,90
           <span style="color: var(--brown)"
             >Clique antes que o preço aumente!</span
           >
